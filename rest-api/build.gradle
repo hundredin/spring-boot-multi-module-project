@@ -1,0 +1,11 @@
+apply plugin: 'war'
+
+jar {
+    baseName = 'rest-api'
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+    compile project(':common-core')
+    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+}

@@ -1,0 +1,48 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'spring-boot'
+
+    version = '0.0.1-SNAPSHOT'
+
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies{
+        testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    }
+
+    // for load time weaving
+    test.doFirst {
+        jvmArgs = [
+                '-javaagent:' + projectDir + '/../lib/aspectjweaver-1.8.9.jar',
+                '-javaagent:' + projectDir + '/../lib/spring-instrument-4.3.3.RELEASE.jar'
+        ]
+    }
+
+    bootRun {
+        jvmArgs = [
+                '-javaagent:' + projectDir + '/../lib/aspectjweaver-1.8.9.jar',
+                '-javaagent:' + projectDir + '/../lib/spring-instrument-4.3.3.RELEASE.jar'
+        ]
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}

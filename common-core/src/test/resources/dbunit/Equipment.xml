@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <equipment id="1" name="car" />
+    <equipment id="2" name="camera" />
+    <equipment id="3" name="phone" />
+</dataset>

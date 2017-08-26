@@ -1,0 +1,10 @@
+*.class
+*~
+.DS_Store
+.springBeans
+*.iml
+.idea
+target
+.gradle
+build
+common-core/src/main/generated

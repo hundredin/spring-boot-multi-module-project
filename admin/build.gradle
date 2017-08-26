@@ -1,0 +1,15 @@
+apply plugin: 'war'
+
+jar {
+	baseName = 'admin'
+	version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+	compile project(":common-core")
+	compile "org.springframework.boot:spring-boot-starter-security:${springBootVersion}"
+	compile "org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}"
+	compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+	runtime "org.springframework.boot:spring-boot-devtools:${springBootVersion}"
+	compileOnly "org.projectlombok:lombok"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <brand id="1" name="bmw" equipment_id="1"/>
+    <brand id="2" name="audi" equipment_id="1"/>
+    <brand id="3" name="benz" equipment_id="1"/>
+
+    <brand id="4" name="canon" equipment_id="2"/>
+    <brand id="5" name="nikon" equipment_id="2"/>
+    <brand id="6" name="sony" equipment_id="2"/>
+
+    <brand id="7" name="Apple" equipment_id="3"/>
+    <brand id="8" name="Samsung" equipment_id="3"/>
+    <brand id="9" name="LG" equipment_id="3"/>
+</dataset>
